@@ -4,7 +4,7 @@ Details on API request and response protocols for the ASR, MT, TTS and Video Int
 
 ## ASR (Speech-to-Text)
 
-The endpoint for ASR service is [https://asr.iitm.ac.in/asr/v2/decode](https://asr.iitm.ac.in/asr/v2/decode)
+The endpoint for ASR service is [https://asr.iitm.ac.in/internal/asr/decode](https://asr.iitm.ac.in/internal/asr/decode)
 
 ### Request keys
 
@@ -36,13 +36,19 @@ In case of a service failure, the API returns a JSON response with the following
 
 ### Supported Languages
 
+- [x] Bengali
 - [x] English
 - [x] Gujarati
 - [x] Hindi
 - [x] Kannada
+- [x] Malayalam
 - [x] Marathi
+- [x] Odia
+- [x] Punjabi
+- [x] Sanskrit
 - [x] Tamil
 - [x] Telugu
+- [x] Urdu
 
 ### Usage
 
@@ -57,7 +63,7 @@ In case of a service failure, the API returns a JSON response with the following
     'vtt': (None, 'true'),
     }
 
-    response = requests.post('https://asr.iitm.ac.in/asr/v2/decode', files=files)
+    response = requests.post('https://asr.iitm.ac.in/internal/asr/decode', files=files)
     print(response.json())
     ```
 
@@ -65,7 +71,7 @@ In case of a service failure, the API returns a JSON response with the following
 
     ``` sh
     curl -v -X POST -F 'file=@speech_sample2.wav' -F 'language=english' \
-    -F 'vtt=true' https://asr.iitm.ac.in/asr/v2/decode
+    -F 'vtt=true' https://asr.iitm.ac.in/internal/asr/decode
     ```
 
 Sample audio files to test the API: [english speech](https://drive.google.com/file/d/1ucJCfKfKr00_09H8_FmW57xFYHYPzC2h/view?usp=share_link), [tamil speech](https://drive.google.com/file/d/19tgIL2YeZ-vU9eABePeBL_O1f1jWp2Sv/view?usp=share_link).
