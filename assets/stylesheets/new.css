@@ -1439,7 +1439,6 @@ html .md-footer-meta.md-typeset a:hover {
 }
 
 .md-header {
-    /* background-color: var(--md-primary-fg-color); */
     background-color: #050050;
     box-shadow: 0 0 .2rem #0000, 0 .2rem .4rem #0000;
     color: var(--md-primary-bg-color);
@@ -3377,7 +3376,6 @@ html .md-footer-meta.md-typeset a:hover {
 }
 
 .md-tabs {
-    /* background-color: var(--md-primary-fg-color); */
     background-color: #050050;
     color: var(--md-primary-bg-color);
     display: block;
