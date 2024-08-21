@@ -1,6 +1,6 @@
 # MT (Text-to-Text)
 
-The endpoint for the Machine Translation service is [https://asr.iitm.ac.in/test1/translate](https://asr.iitm.ac.in/test1/translate).
+The endpoint for the Machine Translation service is [https://asr.iitm.ac.in/internal/asr/decode](https://asr.iitm.ac.in/internal/asr/decode).
 This API supports the translation services translation services provided by research groups at IITB, IIIT-H and Meta AI. While we internally host the [NLLB model](https://ai.facebook.com/research/no-language-left-behind/) from Meta AI, the translations from IITB / IIIT-H are obtained through internal API calls to their systems.
 
 ### Request keys
@@ -83,7 +83,7 @@ Every possible set of language pairs from the below set is supported by the `met
     'translator_choice': 'meta_ai'
     }
 
-    response = requests.post('https://asr.iitm.ac.in/test1/translate', data = payload).json()
+    response = requests.post('https://asr.iitm.ac.in/internal/asr/decode', data = payload).json()
     print(response)
     ```
 
@@ -92,7 +92,7 @@ Every possible set of language pairs from the below set is supported by the `met
     ``` sh
     curl -v -X POST -F 'src_language=english' -F 'tgt_language=telugu' \
     -F 'transcript=Welcome to our lab' -F 'translator_choice=iiit-h' \
-    https://asr.iitm.ac.in/test1/translate
+    https://asr.iitm.ac.in/internal/asr/decode
     ```
 
-Web Demo interface for the NLLB model is available at [https://asr.iitm.ac.in/test4](https://asr.iitm.ac.in/test4)
+Web Demo interface for the NLLB model is available at [https://asr.iitm.ac.in/demo/ttt](https://asr.iitm.ac.in/demo/ttt)
